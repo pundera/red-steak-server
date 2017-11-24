@@ -8,5 +8,6 @@ namespace RedSteakServer.Models.Singletons
     public static class IndexiesNamesHolder
     {
         public static string Questions = "IxQuestionsAll";
+        public static string QuestionValues = "IxQuestionValuesAll";
     }
 }

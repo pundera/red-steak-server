@@ -153,11 +153,13 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\DocController.cs" />
     <Compile Include="Controllers\QuestionsController.cs" />
+    <Compile Include="Controllers\QuestionValuesController.cs" />
     <Compile Include="Data\Import\JsonImportHolder.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Classes\Question.cs" />
+    <Compile Include="Models\Classes\QuestionValue.cs" />
     <Compile Include="Models\Singletons\DocumentStoreHolder.cs" />
     <Compile Include="Models\Singletons\IndexiesNamesHolder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
