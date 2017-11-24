@@ -18,7 +18,7 @@ namespace RedSteakServer.Controllers
             var store = DocumentStoreHolder.Store;
             using (IDocumentSession session = store.OpenSession()) // opens a session that will work in context of 'Database'
             {
-                var questionValues = from q in session.Query<QuestionValue>(IndexiesNamesHolder.QuestionValues) orderby q.QuestionId select q;
+                var questionValues = from q in session.Query<QuestionValue>(IndexiesNamesHolder.QuestionValues) orderby q.Question.Id select q;
                 return questionValues.ToList();
             }
         }
