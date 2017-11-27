@@ -178,7 +178,7 @@
       <Link>Raven.Studio.Html5.zip</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="App_Data\Dump of RedSteak 2017-11-24 04-05.ravendbdump" />
+    <Content Include="App_Data\Dump of RedSteak 2017-11-27 02-02.ravendbdump" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
