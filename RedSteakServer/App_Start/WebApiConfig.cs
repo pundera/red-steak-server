@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using Microsoft.Owin.Cors;
+using System.Web.Http.Cors;
 
 namespace RedSteakServer
 {
@@ -10,7 +11,11 @@ namespace RedSteakServer
     {
         public static void Register(HttpConfiguration config)
         {
+
             // Web API configuration and services
+            // ATTENTION !!! CORS !!! CHANGE in PRODUCTION !!!
+            var cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cors);
 
             // Web API routes
             config.MapHttpAttributeRoutes();

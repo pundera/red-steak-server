@@ -7,13 +7,13 @@ namespace RedSteakServer.Models.Classes
 {
     public class Question
     {
+        public string Id;
         public int Number;
         public string Header;
         public byte Type;
         public string[] TypeValues;
         public bool? Vertical;
         public dynamic DefaultValue;
-        public string Id;
         public int OrderNumber;
     }
 }

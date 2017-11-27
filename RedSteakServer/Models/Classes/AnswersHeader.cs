@@ -7,7 +7,10 @@ namespace RedSteakServer.Models.Classes
 {
     public class AnswersHeader
     {
-        public DateTime Timestamp;
+        public string Id;
+        public DateTime Created;
+        public DateTime Updated;
         public string Note;
+        public IEnumerable<QuestionValue> QuestionValues;
     }
 }

@@ -18,7 +18,7 @@ namespace RedSteakServer.Controllers
             var store = DocumentStoreHolder.Store;
             using (IDocumentSession session = store.OpenSession()) // opens a session that will work in context of 'Database'
             {
-                var questions = from q in session.Query<Question>(IndexiesNamesHolder.Questions) orderby q.OrderNumber select q;
+                var questions = from q in session.Query<Question>(IndexiesHolder.Questions) orderby q.OrderNumber select q;
                 return questions.ToList();
             }
         }
@@ -29,7 +29,7 @@ namespace RedSteakServer.Controllers
             var store = DocumentStoreHolder.Store;
             using (IDocumentSession session = store.OpenSession()) // opens a session that will work in context of 'Database'
             {
-                var question = from q in session.Query<Question>(IndexiesNamesHolder.Questions) where q.Id == id.ToString() select q;
+                var question = from q in session.Query<Question>(IndexiesHolder.Questions) where q.Id == id.ToString() select q;
                 return question.Single();
             }
         }
@@ -58,16 +58,5 @@ namespace RedSteakServer.Controllers
             }
         }
 
-        // Not implemented jet!!!
-        //// PUT: api/Questions/5
-        //public void Put(int id, [FromBody]string value)
-        //{
-        //}
-
-        // Not implemented jet!!!
-        //// DELETE: api/Questions/5
-        //public void Delete(int id)
-        //{
-        //}
     }
 }
